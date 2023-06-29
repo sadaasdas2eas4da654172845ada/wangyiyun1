@@ -1,0 +1,26 @@
+<template>
+    <div class="w-screen h-screen">
+        <div class="bg-orange-400 text-[80px] leading-[300px]">MineView</div>
+        <button @click="f1" v-on:mouseleave="f2">click1</button>
+        <input type="text" :value="value" placeholder="测试" class="border-[1px] @input=“(e)=>{value=e.target.value}">
+        <!-- <button v-on="{click:f1 , mouseleave : f2}">click2</button>
+        <a :href="href" id="id">666+++</a>
+        <a v-bind="{href,id}">66666</a> -->
+    </div>
+</template>
+<script>
+    export default{
+        name:'Mine',
+        data(){
+            return {href:'IndexView',id:'anchor',value:''}
+        },
+        methods:{
+            f1(){
+                console.log(1);
+            },
+            f2(){
+                console.log(1);
+            }
+        }
+    }
+</script>
